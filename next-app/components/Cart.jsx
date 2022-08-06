@@ -1,30 +1,43 @@
-import React, { useRef } from 'react'
-import Link from 'next/link'
-import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai'
-import { TiDeleteOutline } from 'react-icons/ti'
-import toast from 'react-hot-toast'  
+import React, { useRef } from "react";
+import Link from "next/link";
+import {
+  AiOutlineMinus,
+  AiOutlinePlus,
+  AiOutlineLeft,
+  AiOutlineShopping,
+} from "react-icons/ai";
+import { TiDeleteOutline } from "react-icons/ti";
+import toast from "react-hot-toast";
 
-import { useStateContext } from '../context/StateContext'
-import { urlFor } from '../lib/client'
+import { useStateContext } from "../context/StateContext";
+import { urlFor } from "../lib/client";
 
 const Cart = () => {
-  const cartRef = useRef()
-  const { cartTotal, cartQuantity, cartItems, setShowCart } = useStateContext()
+  const cartRef = useRef();
+  const { cartTotal, cartQuantity, cartItems, setShowCart } = useStateContext();
   return (
-    <div className='cart-wrapper' ref={cartRef}>
-      <div className='cart-container'>
-        <button type='button' className='cart-heading' onClick={() => setShowCart(false)}>
+    <div className="cart-wrapper" ref={cartRef}>
+      <div className="cart-container">
+        <button
+          type="button"
+          className="cart-heading"
+          onClick={() => setShowCart(false)}
+        >
           <AiOutlineLeft />
-          <span className='heading'>Your Cart</span>
-          <span className='cart-num-items'>({cartQuantity} items)</span>
+          <span className="heading">Your Cart</span>
+          <span className="cart-num-items">({cartQuantity} items)</span>
         </button>
 
-        {cartItems.length < 1 &&(
-          <div className='empty-cart'>
+        {cartItems.length < 1 && (
+          <div className="empty-cart">
             <AiOutlineShopping size={150} />
             <h3>Your shopping bag is empty</h3>
-            <Link href='/'>
-              <button type="button" onClick={() => setShowCart(false)} className="btn">
+            <Link href="/">
+              <button
+                type="button"
+                onClick={() => setShowCart(false)}
+                className="btn"
+              >
                 Continue Shopping
               </button>
             </Link>
@@ -32,7 +45,7 @@ const Cart = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

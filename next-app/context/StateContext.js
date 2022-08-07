@@ -6,12 +6,17 @@ const Context = createContext();
 export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
-  const [cartTotal, setCartTotal] = useState();
+  const [cartTotal, setCartTotal] = useState(0);
   const [cartQuantity, setCartQuantity] = useState(0);
   const [qty, setQty] = useState(1);
 
   const onAdd = (product, quantity) => {
-    const checkProductInCart = cartItems.find((item) => item.id === product.id);
+    const checkProductInCart = cartItems.find((item) => {
+      if (item.id === undefined) {
+        return;
+      }
+      item.id === product.id;
+    });
 
     setCartTotal((prevCartTotal) => prevCartTotal + product.price * quantity);
     setCartQuantity((prevCartTotal) => prevCartTotal + quantity);

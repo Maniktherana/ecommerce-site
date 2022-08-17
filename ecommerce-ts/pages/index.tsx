@@ -2,17 +2,17 @@ import type { NextPage } from "next";
 import { client } from "../lib/client";
 import { Hero } from "../components";
 
-type Props = {
+interface ProductData {
   products: any;
   bannerData: any;
-};
+}
 
-const Home: NextPage<Props> = ({ products, bannerData }) => {
+const Home: NextPage<ProductData> = (props) => {
+  const { products, bannerData } = props;
   return (
     <>
-      {console.log(bannerData)}
       <div className="flex justify-center items-center">
-        <Hero />
+        <Hero heroBanner={bannerData} />
       </div>
     </>
   );

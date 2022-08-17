@@ -1,7 +1,12 @@
 import React from "react";
 import HeroCarousel from "./HeroCarousel";
 
-const Hero = () => {
+interface Props {
+  heroBanner: any;
+}
+
+const Hero: React.FC<Props> = (props) => {
+  const { heroBanner } = props;
   return (
     <div className="flex flex-col lg:min-h-max xl:flex-row xl:max-w-[1460px]">
       <div
@@ -27,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center items-center md:w-full xl:max-w-[50%] p-8">
-        <HeroCarousel />
+        <HeroCarousel heroBanner={heroBanner} />
       </div>
     </div>
   );

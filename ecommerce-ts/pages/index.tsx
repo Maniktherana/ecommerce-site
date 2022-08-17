@@ -1,7 +1,14 @@
 import type { NextPage } from "next";
+import { Hero } from "../components";
 
 const Home: NextPage = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <div className="flex justify-center items-center">
+        <Hero />
+      </div>
+    </>
+  );
 };
 
 export default Home;

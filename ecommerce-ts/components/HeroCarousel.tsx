@@ -10,7 +10,9 @@ const HeroCarousel: React.FC<Props> = (props) => {
   return (
     <div>
       {heroBanner.map((banner: any) => (
-        <div key={banner.slug}>{banner.product}</div>
+        <div key={banner._id}>
+          {banner.product}, {banner._id}
+        </div>
       ))}
     </div>
   );

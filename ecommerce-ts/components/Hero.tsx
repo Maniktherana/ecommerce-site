@@ -4,8 +4,19 @@ import HeroCarousel from "./HeroCarousel";
 const Hero = () => {
   return (
     <div className="flex flex-col lg:min-h-max xl:flex-row xl:max-w-[1460px]">
-      <div className="grid max-w-screen-xl px-8 py-8 mx-auto md:py-4 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10">
-        <div className="flex flex-col justify-center max-w-[70%]  items-center lg:w-full m-auto place-self-left lg:col-span-12">
+      <div
+        className="
+          grid max-w-screen-xl 
+          px-8 py-8 mx-auto md:py-4 
+          lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10"
+      >
+        <div
+          className="
+            flex flex-col 
+            justify-center items-center place-self-left
+            max-w-[70%]  m-auto 
+            lg:w-full lg:col-span-12"
+        >
           <h1 className="text-4xl inline md:text-5xl xl:text-6xl font-semibold text-left">
             Power your life with Evrydy audio
           </h1>

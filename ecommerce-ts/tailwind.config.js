@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: ["Poppins", "sans-serif"],
+      },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+    },
   },
   plugins: [],
 };

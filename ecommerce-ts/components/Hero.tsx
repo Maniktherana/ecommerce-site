@@ -11,7 +11,7 @@ const Hero: React.FC<Props> = (props) => {
     <div className="flex flex-col lg:min-h-max xl:flex-row xl:max-w-[1460px]">
       <div
         className="
-          grid max-w-screen-xl 
+          grid max-w-screen-xl xl:w-[50%]
           px-8 py-8 mx-auto md:py-4 
           lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10"
       >
@@ -19,7 +19,7 @@ const Hero: React.FC<Props> = (props) => {
           className="
             flex flex-col 
             justify-center items-center place-self-left
-            max-w-[70%]  m-auto 
+            max-w-[90%]  m-auto 
             lg:w-full lg:col-span-12"
         >
           <h1 className="text-4xl inline md:text-5xl xl:text-6xl font-semibold text-left">
@@ -31,7 +31,7 @@ const Hero: React.FC<Props> = (props) => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center md:w-full xl:max-w-[50%] p-8">
+      <div className="flex justify-center items-center md:w-full xl:w-[50%]">
         <HeroCarousel heroBanner={heroBanner} />
       </div>
     </div>

@@ -15,12 +15,13 @@ const Hero: React.FC<Props> = (props) => {
           px-8 py-8 mx-auto md:py-4 
           lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-10"
       >
+        {/* TODO: make conditional rendering in order to remove the word "audio" for large devices */}
         <div
           className="
             flex flex-col 
             justify-center items-center place-self-left
             max-w-[90%]  m-auto 
-            md:max-w-[70%]
+            md:max-w-[70%] lg:max-w-[80%]
             lg:w-full lg:col-span-12"
         >
           <h1 className="text-3xl inline md:text-5xl xl:text-7xl text-center lg:text-left">

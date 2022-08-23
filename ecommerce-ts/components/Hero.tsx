@@ -20,14 +20,15 @@ const Hero: React.FC<Props> = (props) => {
             flex flex-col 
             justify-center items-center place-self-left
             max-w-[90%]  m-auto 
+            md:max-w-[70%]
             lg:w-full lg:col-span-12"
         >
-          <h1 className="text-4xl inline md:text-5xl xl:text-6xl font-semibold text-left">
-            Power your life with Evrydy audio
+          <h1 className="text-3xl inline md:text-5xl xl:text-7xl text-center lg:text-left">
+            Power your life with Evryday audio
           </h1>
-          <p className="text-[16px] my-3 font-light text-left">
-            Millions of customers choose Evrydy for the best prices, comfort and
-            audio quality
+          <p className="text-md my-3 text-[#404040] font-light text-center lg:text-left lg:text-md lg:text-xl">
+            Millions of customers choose Evryday for the best prices, comfort
+            and audio quality
           </p>
         </div>
       </div>

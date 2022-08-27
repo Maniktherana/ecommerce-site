@@ -1,5 +1,3 @@
-import Hero from "./Hero";
-
 export { default as Footer } from "./Footer";
 export { default as Cart } from "./Cart";
 export { default as Banner } from "./Banner";

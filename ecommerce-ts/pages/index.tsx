@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { client } from "../lib/client";
-import { Hero } from "../components";
+import { Hero, Product } from "../components";
 
 interface ProductData {
   products: any;
@@ -13,6 +13,7 @@ const Home: NextPage<ProductData> = (props) => {
     <>
       <div className="flex justify-center items-center">
         <Hero heroBanner={bannerData} />
+        {/* <Product product={products} /> */}
       </div>
     </>
   );

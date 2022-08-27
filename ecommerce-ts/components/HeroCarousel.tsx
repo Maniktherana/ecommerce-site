@@ -10,7 +10,12 @@ const HeroCarousel: React.FC<Props> = (props) => {
   const { heroBanner } = props;
   const product = heroBanner[1];
   return (
-    <div className="aspect-[4/3] relative rounded-[11%] max-w-[80%] min-w-[50%] bg-gradient-to-tl from-[#828282] via-[#c2c0c0] to-[#e6e3e3]">
+    <div className="
+      aspect-[4/3] relative max-w-[80%] min-w-[50%]
+      rounded-b-[11%] xl:rounded-r-[11%] 
+      bg-gradient-to-b 
+      xl:bg-gradient-to-r from-[#ffffff] via-[#56acf3] to-[#0688f3]"
+    >
       <img
         src={urlFor(product.image).url()}
         alt={product.product}
@@ -33,3 +38,5 @@ export default HeroCarousel;
 //   alt="hero"
 //   className="aspect-[4/3] rounded-3xl"
 // />;
+
+
